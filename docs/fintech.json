@@ -1,0 +1,429 @@
+{
+  "info": {
+    "_postman_id": "159aa622-ea57-47db-996e-fdbb5e069e43",
+    "name": "Fintech-v1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51360548",
+    "_collection_link": "https://go.postman.co/collection/51360548-159aa622-ea57-47db-996e-fdbb5e069e43?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register New User",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Aditya Admin\",\r\n  \"email\": \"admin@test.com\",\r\n  \"password\": \"Password123!\",\r\n  \"role\": \"ADMIN\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Register New User2",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Receiver User\",\r\n  \"email\": \"receiver@test.com\",\r\n  \"password\": \"Password123!\",\r\n  \"role\": \"VIEWER\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "wallets",
+      "item": [
+        {
+          "name": "Account1",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyMjVlNDkzYWVhYmJkYWUzMWU1ZGIiLCJpYXQiOjE3NzUzNzk5NDAsImV4cCI6MTc3NTYzOTE0MH0.2eX4WUXPJc7kQz2AAqU2duyVpUscqT_FeXM2qi7bork",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userId\": \"69d225e493aeabbdae31e5db\",\r\n  \"currency\": \"INR\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/accounts/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "accounts",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Account2",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyMjVlNDkzYWVhYmJkYWUzMWU1ZGIiLCJpYXQiOjE3NzUzNzk5NDAsImV4cCI6MTc3NTYzOTE0MH0.2eX4WUXPJc7kQz2AAqU2duyVpUscqT_FeXM2qi7bork",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userId\": \"69d227cb93aeabbdae31e5e4\",\r\n  \"currency\": \"INR\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/accounts/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "accounts",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Transcation",
+      "item": [
+        {
+          "name": "Initial Fund",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyMjVlNDkzYWVhYmJkYWUzMWU1ZGIiLCJpYXQiOjE3NzUzNzk5NDAsImV4cCI6MTc3NTYzOTE0MH0.2eX4WUXPJc7kQz2AAqU2duyVpUscqT_FeXM2qi7bork",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"toAccount\": \"69d2270a93aeabbdae31e5df\",\r\n  \"amount\": 5000,\r\n  \"idempotencyKey\": \"seed-money-final-test\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/transactions/system/initial-funds",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "transactions",
+                "system",
+                "initial-funds"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Transcation",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyMjVlNDkzYWVhYmJkYWUzMWU1ZGIiLCJpYXQiOjE3NzUzNzk5NDAsImV4cCI6MTc3NTYzOTE0MH0.2eX4WUXPJc7kQz2AAqU2duyVpUscqT_FeXM2qi7bork",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"fromAccount\": \"69d2270a93aeabbdae31e5df\",\r\n  \"toAccount\": \"69d229e293aeabbdae31e5ec\",\r\n  \"amount\": 1000,\r\n  \"idempotencyKey\": \"first-successful-transfer-001\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/transactions/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "transactions",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3000/api/transactions/",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyMjVlNDkzYWVhYmJkYWUzMWU1ZGIiLCJpYXQiOjE3NzUzNzk5NDAsImV4cCI6MTc3NTYzOTE0MH0.2eX4WUXPJc7kQz2AAqU2duyVpUscqT_FeXM2qi7bork",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"fromAccount\": \"69d2270a93aeabbdae31e5df\",\r\n  \"toAccount\": \"69d229e293aeabbdae31e5ec\",\r\n  \"amount\": 750,\r\n  \"idempotencyKey\": \"mail-victory-test-001\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/transactions/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "transactions",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "p2p Transaction",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"fromAccount\": \"69d249f2a507eca967c0a642\",\r\n  \"toAccount\": \"69d24c78e1c5cc55d1a209b8\",\r\n  \"amount\": 1200,\r\n  \"category\": \"Salary\",\r\n  \"description\": \"April Internship Stipend\",\r\n  \"idempotencyKey\": \"final-stipend-test-101\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/transactions",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Balance",
+      "item": [
+        {
+          "name": "http://localhost:3000/api/accounts/balance/69d2270a93aeabbdae31e5df",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyMjVlNDkzYWVhYmJkYWUzMWU1ZGIiLCJpYXQiOjE3NzUzNzk5NDAsImV4cCI6MTc3NTYzOTE0MH0.2eX4WUXPJc7kQz2AAqU2duyVpUscqT_FeXM2qi7bork",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/accounts/balance/69d2270a93aeabbdae31e5df",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "accounts",
+                "balance",
+                "69d2270a93aeabbdae31e5df"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "http://localhost:3000/api/dashboard/summary",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyMjVlNDkzYWVhYmJkYWUzMWU1ZGIiLCJpYXQiOjE3NzUzNzk5NDAsImV4cCI6MTc3NTYzOTE0MH0.2eX4WUXPJc7kQz2AAqU2duyVpUscqT_FeXM2qi7bork",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/dashboard/summary",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "dashboard",
+                "summary"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3000/api/dashboard/recent",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyMjdjYjkzYWVhYmJkYWUzMWU1ZTQiLCJpYXQiOjE3NzUzODA0MjcsImV4cCI6MTc3NTYzOTYyN30.XL98XvMrefmzDPIWq0nfppbE2OTCWVnV4pNXV69X8Yc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/dashboard/recent",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "dashboard",
+                "recent"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
